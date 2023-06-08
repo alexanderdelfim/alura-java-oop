@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.models.Movie;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Movie myMovie = new Movie();

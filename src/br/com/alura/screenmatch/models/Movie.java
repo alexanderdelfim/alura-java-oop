@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.models;
+
 public class Movie {
     private String name;
     private boolean includedInthePlan;
@@ -58,19 +60,19 @@ public class Movie {
         this.durationInMinutes = durationInMinutes;
     }
 
-    void displayTechnicalSheet() {
+    public void displayTechnicalSheet() {
         System.out.println("Nome do filme: " + this.name);
         System.out.println("Ano de lançamento: " + this.releaseYear);
         System.out.println("Duração do filme: " + this.durationInMinutes + " minutos");
         System.out.println("Incluído no plano: " + this.includedInthePlan);
     }
 
-    void evaluate(double score) {
+    public void evaluate(double score) {
         this.sumOfEvaluations += score;
         this.totalOfEvaluations++;
     }
 
-    double getAverage() {
+    public double getAverage() {
         return this.sumOfEvaluations / this.totalOfEvaluations;
     }
 }
