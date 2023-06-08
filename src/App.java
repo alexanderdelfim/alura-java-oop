@@ -1,16 +1,16 @@
 public class App {
     public static void main(String[] args) throws Exception {
         Movie myMovie = new Movie();
-        myMovie.name = "O poderoso chefão";
-        myMovie.releaseYear = 1970;
-        myMovie.durationInMinutes = 180;
+        myMovie.setName("O poderoso chefão");
+        myMovie.setReleaseYear(1970);
+        myMovie.setDurationInMinutes(180);
+        myMovie.setIncludedInthePlan(true);
 
         myMovie.displayTechnicalSheet();
         myMovie.evaluate(8);
         myMovie.evaluate(10);
         myMovie.evaluate(5);
-        System.out.println(myMovie.sumOfEvaluations);
-        System.out.println(myMovie.totalOfEvaluations);
-        System.out.println(myMovie.getAverage());
+
+        System.out.println("Média de avaliações do filme: " + myMovie.getAverage());
     }
 }
