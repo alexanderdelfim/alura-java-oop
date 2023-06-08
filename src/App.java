@@ -15,6 +15,7 @@ public class App {
         myMovie.evaluate(5);
 
         System.out.println("Média de avaliações do filme: " + myMovie.getAverage());
+        System.out.println("Duração do filme: " + myMovie.getDurationInMinutes());
 
         Serie arcane = new Serie();
         arcane.setName("Arcane");
@@ -24,5 +25,8 @@ public class App {
         arcane.setSeasons(1);
         arcane.setEpisodesPerSeason(9);
         arcane.setActive(false);
+
+        arcane.displayTechnicalSheet();
+        System.out.println("Duração da série: " + arcane.getDurationInMinutes());
     }
 }

@@ -61,9 +61,8 @@ public class Title {
     }
 
     public void displayTechnicalSheet() {
-        System.out.println("Nome do filme: " + this.name);
+        System.out.println("Nome: " + this.name);
         System.out.println("Ano de lançamento: " + this.releaseYear);
-        System.out.println("Duração do filme: " + this.durationInMinutes + " minutos");
         System.out.println("Incluído no plano: " + this.includedInthePlan);
     }
 
