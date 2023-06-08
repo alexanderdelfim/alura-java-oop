@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculation.Calculator;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -17,6 +18,12 @@ public class App {
         System.out.println("Média de avaliações do filme: " + myMovie.getAverage());
         System.out.println("Duração do filme: " + myMovie.getDurationInMinutes());
 
+        Movie schoolOfRock = new Movie();
+        schoolOfRock.setName("Escola de rock");
+        schoolOfRock.setReleaseYear(2003);
+        schoolOfRock.setDurationInMinutes(109);
+        schoolOfRock.setIncludedInthePlan(true);
+
         Serie arcane = new Serie();
         arcane.setName("Arcane");
         arcane.setReleaseYear(2021);
@@ -28,5 +35,11 @@ public class App {
 
         arcane.displayTechnicalSheet();
         System.out.println("Duração da série: " + arcane.getDurationInMinutes());
+
+        Calculator timeCalculator = new Calculator();
+        timeCalculator.include(myMovie);
+        timeCalculator.include(schoolOfRock);
+        timeCalculator.include(arcane);
+        System.out.println(timeCalculator.getTotalTime());
     }
 }
