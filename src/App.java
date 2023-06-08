@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculation.Calculator;
+import br.com.alura.screenmatch.calculation.RecomendationFilter;
+import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -23,6 +25,9 @@ public class App {
         schoolOfRock.setReleaseYear(2003);
         schoolOfRock.setDurationInMinutes(109);
         schoolOfRock.setIncludedInthePlan(true);
+        schoolOfRock.evaluate(8);
+        schoolOfRock.evaluate(10);
+        schoolOfRock.evaluate(8);
 
         Serie arcane = new Serie();
         arcane.setName("Arcane");
@@ -41,5 +46,18 @@ public class App {
         timeCalculator.include(schoolOfRock);
         timeCalculator.include(arcane);
         System.out.println(timeCalculator.getTotalTime());
+
+        RecomendationFilter recomendationFilter = new RecomendationFilter();
+
+        recomendationFilter.filter(schoolOfRock);
+
+        Episode episode = new Episode();
+        episode.setName("Arcane: episode 1");
+        episode.setNumber(1);
+        episode.setSerie(arcane);
+        episode.setTotalViews(2000);
+
+        recomendationFilter.filter(episode);
+        recomendationFilter.filter(arcane);
     }
 }

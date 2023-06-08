@@ -1,9 +1,20 @@
 package br.com.alura.screenmatch.models;
 
-public class Episode {
+import br.com.alura.screenmatch.calculation.Rateable;
+
+public class Episode implements Rateable{
     private int number;
     private String name;
     private Serie serie;
+    private int totalViews;
+
+    public int getTotalViews() {
+        return this.totalViews;
+    }
+
+    public void setTotalViews(int totalViews) {
+        this.totalViews = totalViews;
+    }
 
     public int getNumber() {
         return this.number;
@@ -29,4 +40,12 @@ public class Episode {
         this.serie = serie;
     }
 
+    @Override
+    public int getRating() {
+        if (this.totalViews > 100) {
+            return 4;
+        } else {
+            return 2;
+        }
+    }
 }

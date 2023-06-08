@@ -1,8 +1,6 @@
 package br.com.alura.screenmatch.models;
 
-import br.com.alura.screenmatch.calculation.Rateable;
-
-public class Movie extends Title implements Rateable {
+public class Movie extends Title {
     private String director;
 
     public String getDirector() {
@@ -15,6 +13,6 @@ public class Movie extends Title implements Rateable {
 
     @Override
     public int getRating() {
-        return 0;
+        return (int) this.getAverage() / 2;
     }
 }

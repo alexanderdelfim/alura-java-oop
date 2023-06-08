@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.models;
 
-public class Title {
+import br.com.alura.screenmatch.calculation.Rateable;
+
+public class Title implements Rateable {
     private String name;
     private boolean includedInthePlan;
     private double sumOfEvaluations;
@@ -73,5 +75,10 @@ public class Title {
 
     public double getAverage() {
         return this.sumOfEvaluations / this.totalOfEvaluations;
+    }
+
+    @Override
+    public int getRating() {
+        return (int) this.getAverage() / 2;
     }
 }
