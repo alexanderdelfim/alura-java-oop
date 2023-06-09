@@ -4,7 +4,7 @@ public class Audio {
     private String title;
     private int totalReproductions;
     private int totalLikes;
-    private double rating;
+    private int rating;
 
     public String getTitle() {
         return this.title;
