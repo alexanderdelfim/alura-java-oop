@@ -1,5 +1,6 @@
 package br.com.alura.mymusics.principal;
 
+import br.com.alura.mymusics.models.Favorites;
 import br.com.alura.mymusics.models.Music;
 import br.com.alura.mymusics.models.Podcast;
 
@@ -8,6 +9,10 @@ public class Principal {
         Music myMusic = new Music();
         myMusic.setTitle("Love from the other side");
         myMusic.setArtist("Fall Out Boys");
+
+        Music otherMusic = new Music();
+        otherMusic.setTitle("Okey Dokey");
+        otherMusic.setArtist("Zico");
 
         for (int i = 0; i < 500; i++) {
             myMusic.reproduce();
@@ -28,5 +33,10 @@ public class Principal {
         for (int i = 0; i < 100; i++) {
             myPodcast.like();
         }
+
+        Favorites myFavorites = new Favorites();
+        myFavorites.include(myPodcast);
+        myFavorites.include(myMusic);
+        myFavorites.include(otherMusic);
     }
 }

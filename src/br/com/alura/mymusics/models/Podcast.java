@@ -19,4 +19,13 @@ public class Podcast extends Audio {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public double getRating() {
+        if (getTotalLikes() > 50) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }
