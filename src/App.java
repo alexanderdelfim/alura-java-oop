@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.com.alura.screenmatch.calculation.Calculator;
 import br.com.alura.screenmatch.calculation.RecomendationFilter;
 import br.com.alura.screenmatch.models.Episode;
@@ -59,5 +61,21 @@ public class App {
 
         recomendationFilter.filter(episode);
         recomendationFilter.filter(arcane);
+
+        var AlexanderMovie = new Movie();
+        AlexanderMovie.setDurationInMinutes(131);
+        AlexanderMovie.setName("Gundam: Hathaway");
+        AlexanderMovie.setReleaseYear(2021);
+        AlexanderMovie.evaluate(10);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(schoolOfRock);
+        movieList.add(myMovie);
+        movieList.add(AlexanderMovie);
+
+        System.out.println("tamanho da lista " + movieList.size());
+        System.out.println("Primeiro filme da lista: " + movieList.get(0).getName());
+        System.out.println(movieList);
+
     }
 }
