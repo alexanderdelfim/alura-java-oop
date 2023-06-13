@@ -76,6 +76,8 @@ public class App {
         System.out.println("tamanho da lista " + movieList.size());
         System.out.println("Primeiro filme da lista: " + movieList.get(0).getName());
         System.out.println(movieList);
+        System.out.println("toString do filme " + movieList.get(0).toString());
+
 
     }
 }

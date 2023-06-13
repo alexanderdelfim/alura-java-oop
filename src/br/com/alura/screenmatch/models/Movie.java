@@ -15,4 +15,9 @@ public class Movie extends Title {
     public int getRating() {
         return (int) this.getAverage() / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getName() + " (" + this.getReleaseYear() + ")";
+    }
 }
