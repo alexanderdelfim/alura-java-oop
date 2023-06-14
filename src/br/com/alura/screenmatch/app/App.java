@@ -1,3 +1,4 @@
+package br.com.alura.screenmatch.app;
 import java.util.ArrayList;
 
 import br.com.alura.screenmatch.calculation.Calculator;
@@ -8,9 +9,7 @@ import br.com.alura.screenmatch.models.Serie;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Movie myMovie = new Movie();
-        myMovie.setName("O poderoso chefão");
-        myMovie.setReleaseYear(1970);
+        Movie myMovie = new Movie("O poderoso chefão", 1970);
         myMovie.setDurationInMinutes(180);
         myMovie.setIncludedInthePlan(true);
 
@@ -22,18 +21,14 @@ public class App {
         System.out.println("Média de avaliações do filme: " + myMovie.getAverage());
         System.out.println("Duração do filme: " + myMovie.getDurationInMinutes());
 
-        Movie schoolOfRock = new Movie();
-        schoolOfRock.setName("Escola de rock");
-        schoolOfRock.setReleaseYear(2003);
+        Movie schoolOfRock = new Movie("Escola de rock", 2003);
         schoolOfRock.setDurationInMinutes(109);
         schoolOfRock.setIncludedInthePlan(true);
         schoolOfRock.evaluate(8);
         schoolOfRock.evaluate(10);
         schoolOfRock.evaluate(8);
 
-        Serie arcane = new Serie();
-        arcane.setName("Arcane");
-        arcane.setReleaseYear(2021);
+        Serie arcane = new Serie("Arcane", 2021);
         arcane.setMinutesPerEpisode(41);
         arcane.setIncludedInthePlan(true);
         arcane.setSeasons(1);
@@ -62,22 +57,20 @@ public class App {
         recomendationFilter.filter(episode);
         recomendationFilter.filter(arcane);
 
-        var AlexanderMovie = new Movie();
-        AlexanderMovie.setDurationInMinutes(131);
-        AlexanderMovie.setName("Gundam: Hathaway");
-        AlexanderMovie.setReleaseYear(2021);
-        AlexanderMovie.evaluate(10);
+        var alexanderMovie = new Movie("Gundam: Hathaway", 2021);
+        alexanderMovie.setDurationInMinutes(131);
+        alexanderMovie.evaluate(10);
 
         ArrayList<Movie> movieList = new ArrayList<>();
         movieList.add(schoolOfRock);
         movieList.add(myMovie);
-        movieList.add(AlexanderMovie);
+        movieList.add(alexanderMovie);
 
         System.out.println("tamanho da lista " + movieList.size());
         System.out.println("Primeiro filme da lista: " + movieList.get(0).getName());
         System.out.println(movieList);
         System.out.println("toString do filme " + movieList.get(0).toString());
 
-
+        alexanderMovie.toString();
     }
 }

@@ -1,6 +1,10 @@
 package br.com.alura.screenmatch.models;
 
 public class Movie extends Title {
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     private String director;
 
     public String getDirector() {
