@@ -2,6 +2,7 @@ package br.com.alura.screenmatch.app;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
@@ -41,6 +42,10 @@ public class AppWithLists {
         System.out.println(names);
 
         Collections.sort(list);
+        System.out.println(list);
+
+        list.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println("Comparando por ano");
         System.out.println(list);
 
     }
