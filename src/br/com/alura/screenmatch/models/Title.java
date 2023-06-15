@@ -2,7 +2,7 @@ package br.com.alura.screenmatch.models;
 
 import br.com.alura.screenmatch.calculation.Rateable;
 
-public class Title implements Rateable {
+public class Title implements Rateable, Comparable<Title> {
     private String name;
     private boolean includedInthePlan;
     private double sumOfEvaluations;
@@ -85,5 +85,10 @@ public class Title implements Rateable {
     @Override
     public int getRating() {
         return (int) this.getAverage() / 2;
+    }
+
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
     }
 }

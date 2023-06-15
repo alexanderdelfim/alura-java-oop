@@ -1,6 +1,7 @@
 package br.com.alura.screenmatch.app;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
@@ -29,5 +30,18 @@ public class AppWithLists {
                 System.out.println("Classsificação " + movie.getRating());
             }
         }
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("João");
+        names.add("Alexander");
+        names.add("Paulo");
+
+        Collections.sort(names);
+        System.out.println(names);
+
+        Collections.sort(list);
+        System.out.println(list);
+
     }
 }
