@@ -3,6 +3,8 @@ package br.com.alura.screenmatch.app;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
@@ -32,7 +34,7 @@ public class AppWithLists {
             }
         }
 
-        ArrayList<String> names = new ArrayList<>();
+        List<String> names = new LinkedList<>();
 
         names.add("João");
         names.add("Alexander");
