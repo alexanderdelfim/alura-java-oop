@@ -1,6 +1,6 @@
 package br.com.alura.creditcard;
 
-public class Purchase {
+public class Purchase implements Comparable<Purchase> {
     private String description;
     private double value;
 
@@ -22,6 +22,12 @@ public class Purchase {
     public String toString() {
         return "Compra: descrição = " + description + 
             " valor = " + value;
+    }
+
+    @Override
+    public int compareTo(Purchase otherPurchase) {
+        return Double.valueOf(this.value)
+            .compareTo(Double.valueOf(otherPurchase.value));
     }
     
 }

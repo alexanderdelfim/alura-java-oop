@@ -17,6 +17,8 @@ public class CreditCard {
     public boolean launchBuy(Purchase purchase) {
         if (this.balance > purchase.getValue()) {
             this.balance -= purchase.getValue();
+            this.purchases.add(purchase);
+            return true;
         }
 
         return false;
